@@ -5,9 +5,7 @@ function displayError() {
   $('#errors').html("I'm sorry, there's been an error. Please try again.")
 }
 
-function renderSearchResults(data) {
-  return data.items.map(result => renderSearchResult(result))
-}
+
 
 function renderSearchResult(result) {
   return
@@ -28,18 +26,22 @@ function searchRepositories() {
     })
 }
 
-// function renderSearchResult(result) {
-//   return
-//     `<div>
-//       <h2><a href="${result.html_url}">${result.name}</a></h2>
-//       <p><a href="#" data-repository="${result.name}" data-owner="${result.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
-//       <p>${result.description ? result.description : ''}</p>
-//     </div>`
-// }
+function renderSearchResult(result) {
+  return
+    `<div>
+      <h2><a href="${result.html_url}">${result.name}</a></h2>
+      <p><a href="#" data-repository="${result.name}" data-owner="${result.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
+      <p>${result.description ? result.description : ''}</p>
+    </div>`
+}
 
-// function displayError() {
-//   $('#errors').html("I'm sorry, there's been an error. Please try again.")
-// }
+function renderSearchResults(data) {
+  return data.items.map(result => renderSearchResult(result))
+}
+
+function displayError() {
+  $('#errors').html("I'm sorry, there's been an error. Please try again.")
+}
 
 function showCommits(repo) {
   $.get(`https://api.github.com/repos/${repo.dataset.owner}/${repo.dataset.repository}/commits`, data => {
