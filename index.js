@@ -21,9 +21,7 @@ function renderSearchResult(result) {
 }
 
 const renderSearchResults = function(data) {
-  return data.items.map(result => {
-    return renderSearchResult(result)
-  }
+  return data.items.map(result => renderSearchResult(result)
 }
 
 // function renderSearchResults(data) {
