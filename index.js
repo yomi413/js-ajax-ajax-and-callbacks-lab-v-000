@@ -1,6 +1,10 @@
 $(document).ready(function (){
 });
 
+function renderSearchResults(data) {
+  return data.items.map(result => renderSearchResult(result))
+}
+
 function searchRepositories() {
   const search = $('#searchTerms').val()
 
@@ -9,10 +13,6 @@ function searchRepositories() {
     }).fail(error => {
       displayError()
     })
-}
-
-function renderSearchResults(data) {
-  data.items.map(result => renderSearchResult(result))
 }
 
 function renderSearchResult(result) {
