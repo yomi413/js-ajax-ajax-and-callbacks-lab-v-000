@@ -1,7 +1,7 @@
 $(document).ready(function (){
 });
 
-function searchRepositories(searchTerms) {
+function searchRepositories() {
   let search = $('#searchTerms').val()
 
   $.get(`https://api.github.com/search/repositories?q=${search}`, data => {
