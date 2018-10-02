@@ -20,11 +20,17 @@ function renderSearchResult(result) {
     </div><hr>`
 }
 
+const renderSearchResults = function(data) {
+  return data.items.map(function(result) {
+    return renderSearchResult(result)
+  }
+}
+
 // function renderSearchResults(data) {
 //   return data.items.map(result => renderSearchResult(result))
 // }
 
-const renderSearchResults = data => data.items.map(result => renderSearchResult(result))
+// const renderSearchResults = ()data => data.items.map(result => renderSearchResult(result))
 
 function displayError() {
   $('#errors').html("I'm sorry, there's been an error. Please try again.")
