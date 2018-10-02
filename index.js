@@ -12,7 +12,7 @@ function searchRepositories() {
 }
 
 function renderSearchResults(data) {
-  return data.items.map(result => renderSearchResult(result))
+  data.items.map(result => renderSearchResult(result))
 }
 
 function renderSearchResult(result) {
