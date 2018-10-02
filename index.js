@@ -1,6 +1,10 @@
 $(document).ready(function (){
 });
 
+function displayError() {
+  $('#errors').html("I'm sorry, there's been an error. Please try again.")
+}
+
 function renderSearchResults(data) {
   return data.items.map(result => renderSearchResult(result))
 }
@@ -33,9 +37,9 @@ function searchRepositories() {
 //     </div>`
 // }
 
-function displayError() {
-  $('#errors').html("I'm sorry, there's been an error. Please try again.")
-}
+// function displayError() {
+//   $('#errors').html("I'm sorry, there's been an error. Please try again.")
+// }
 
 function showCommits(repo) {
   $.get(`https://api.github.com/repos/${repo.dataset.owner}/${repo.dataset.repository}/commits`, data => {
