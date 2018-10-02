@@ -29,7 +29,7 @@ function displayError() {
 }
 
 function showCommits(repo) {
-  $.get(`https://api.github.com/search/repos/${repo.dataset.owner}/${repo.dataset.repository}`, data => {
+  $.get(`https://api.github.com/search/repos/${repo.dataset.owner}/${repo.dataset.repository}/commits`, data => {
     $('#details').html(renderCommits(data))
   }).fail(error => {
     displayError()
