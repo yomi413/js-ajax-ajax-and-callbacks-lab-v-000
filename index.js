@@ -28,7 +28,7 @@ function renderSearchResults(data) {
 //       <hr>
 //     `;
 // }
-// 
+//
 // const renderSearchResults = data => data.items.map(result => renderSearchResult(result));
 
 function searchRepositories() {
