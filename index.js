@@ -41,5 +41,5 @@ function commits(data) {
 }
 
 function commit() {
-  
+
 }
