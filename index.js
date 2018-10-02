@@ -37,7 +37,8 @@ function showCommits(repo) {
 }
 
 function commits(data) {
-  return data.items.map(detail => commit(detail))
+  let result = data.map(commit => commit(commit)).join('')
+  return `<ul>${result}</ul>`
 }
 
 function commit(commit) {
