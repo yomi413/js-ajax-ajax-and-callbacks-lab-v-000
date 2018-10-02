@@ -3,7 +3,7 @@ $(document).ready(function (){
 
 function searchRepositories(searchTerms) {
   let search = $('button').click(function() {
-    $('input:text').val()
+    $('input:text').val(searchTerms)
   })
   // let search = $('#searchTerms').val()
 
