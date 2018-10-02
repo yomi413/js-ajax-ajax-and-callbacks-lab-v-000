@@ -3,7 +3,12 @@ function displayError() {
 }
 
 function searchRepositories() {
-  
+  let search = $('#searchTerms').val()
+  $.get(`https://api.github.com/search/repositories?q=${search}`, data => {
+    $('#results').html(renderSearchResults(data))
+  }).fail(error => {
+    displayError()
+  })
 }
 
 
@@ -11,12 +16,7 @@ function searchRepositories() {
 // });
 
 // function searchRepositories() {
-  // let search = $('#searchTerms').val()
-  // $.get(`https://api.github.com/search/repositories?q=${search}`, data => {
-  //     $('#results').html(renderSearchResults(data))
-  //   }).fail(error => {
-  //     displayError()
-  //   })
+
 // }
 
 // function renderSearchResult(result) {
