@@ -1,20 +1,18 @@
 $(document).ready(function (){
 });
 
-function displayError() {
-  $('#errors').html("I'm sorry, there's been an error. Please try again.")
-}
-
-
-
-function renderSearchResult(result) {
-  return
-    `<div>
-      <h2><a href="${result.html_url}">${result.name}</a></h2>
-      <p><a href="#" data-repository="${result.name}" data-owner="${result.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
-      <p>${result.description ? result.description : ''}</p>
-    </div>`
-}
+// function displayError() {
+//   $('#errors').html("I'm sorry, there's been an error. Please try again.")
+// }
+// 
+// function renderSearchResult(result) {
+//   return
+//     `<div>
+//       <h2><a href="${result.html_url}">${result.name}</a></h2>
+//       <p><a href="#" data-repository="${result.name}" data-owner="${result.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
+//       <p>${result.description ? result.description : ''}</p>
+//     </div>`
+// }
 
 function searchRepositories() {
   let search = $('#searchTerms').val()
