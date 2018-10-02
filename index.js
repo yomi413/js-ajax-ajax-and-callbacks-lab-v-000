@@ -23,7 +23,7 @@ const renderSearchResults = data => data.items.map(result => renderSearchResult(
 //       <p>${result.description}</p>
 //     </div><hr>`
 // }
-// 
+//
 // function renderSearchResults(data) {
 //   return data.items.map(result => renderSearchResult(result))
 // }
