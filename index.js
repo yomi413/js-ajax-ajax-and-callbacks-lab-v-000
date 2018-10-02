@@ -1,5 +1,5 @@
-$(document).ready(function (){
-});
+// $(document).ready(function (){
+// });
 
 function searchRepositories() {
   let search = $('#searchTerms').val()
