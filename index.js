@@ -20,13 +20,9 @@ function renderSearchResult(result) {
     </div><hr>`
 }
 
-const renderSearchResults = function(data) {
-  return data.items.map(result => renderSearchResult(result)
+function renderSearchResults(data) {
+  return data.items.map(result => renderSearchResult(result))
 }
-
-// function renderSearchResults(data) {
-//   return data.items.map(result => renderSearchResult(result))
-// }
 
 function displayError() {
   $('#errors').html("I'm sorry, there's been an error. Please try again.")
