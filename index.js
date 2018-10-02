@@ -4,7 +4,7 @@ $(document).ready(function (){
 function searchRepositories() {
   let searchTerms = $('#searchTerms').val()
 
-  $.get(`https://api.github.com/search/repositories/?q=${searchTerms}`, data => {
+  $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, data => {
       $('#results').html(renderSearchResults(data))
     }).fail(error => {
       displayError()
