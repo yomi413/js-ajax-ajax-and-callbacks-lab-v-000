@@ -1,3 +1,8 @@
+// function displayError() {
+//   $('#errors').html("I'm sorry, there's been an error. Please try again.")
+// }
+
+
 // $(document).ready(function (){
 // });
 
@@ -23,9 +28,7 @@
 //   return data.items.map(result => renderSearchResult(result))
 // }
 //
-// function displayError() {
-//   $('#errors').html("I'm sorry, there's been an error. Please try again.")
-// }
+
 //
 // function showCommits(repo) {
 //   $.get(`https://api.github.com/repos/${repo.dataset.owner}/${repo.dataset.repository}/commits`, data => {
