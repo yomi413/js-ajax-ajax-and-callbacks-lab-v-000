@@ -28,8 +28,8 @@ function displayError() {
   $('#errors').html("I'm sorry, there's been an error. Please try again.")
 }
 
-function showCommits() {
-  $.get(`https://api.github.com/search/repos`, data => {
+function showCommits(repo) {
+  $.get(`https://api.github.com/search/repos/${repo.dataset.owner}/${repo.dataset.repository}`, data => {
     $('#results').html(renderSearchResults(data))
   }).fail(error => {
     displayError()
