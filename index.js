@@ -2,7 +2,7 @@ $(document).ready(function (){
 });
 
 function searchRepositories(searchTerms) {
-  let search = $('#searchTerms').val(`${searchTerms}`)
+  let search = $('#searchTerms').val(searchTerms)
 
   // let search = $('#searchTerms').val()
 
