@@ -40,6 +40,6 @@ function commits(data) {
   return data.items.map(detail => commit(detail))
 }
 
-function commit() {
-
+function commit(commit) {
+  return `<li><h3>${commit.sha}</h3><p>${commit.commit.message}</p></li>`
 }
