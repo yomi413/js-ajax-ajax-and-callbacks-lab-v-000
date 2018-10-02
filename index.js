@@ -21,7 +21,7 @@ function renderSearchResult(result) {
 }
 
 const renderSearchResults = function(data) {
-  return data.items.map(function(result) {
+  return data.items.map(result => {
     return renderSearchResult(result)
   }
 }
@@ -29,8 +29,6 @@ const renderSearchResults = function(data) {
 // function renderSearchResults(data) {
 //   return data.items.map(result => renderSearchResult(result))
 // }
-
-// const renderSearchResults = ()data => data.items.map(result => renderSearchResult(result))
 
 function displayError() {
   $('#errors').html("I'm sorry, there's been an error. Please try again.")
